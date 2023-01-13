@@ -55,7 +55,7 @@ app.post("/login", async (req, res) => {
       if (result) {
         res.send({ message: true });
       } else {
-        res.send({ message: "wrong password" });
+        res.send({ message: false });
       }
     });
   } else {
