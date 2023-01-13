@@ -59,8 +59,9 @@ app.post("/login", async (req, res) => {
       }
     });
   } else {
-    res.send("wrong username");
+    res.send({ message:"wrong username" });
   }
+  console.log(res.message)
 });
 
 // server listening

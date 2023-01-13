@@ -9,6 +9,7 @@ import axios from "axios";
 import { useState, useEffect  } from 'react';
 import About from './About';
 import Signup from './Signup';
+import Login from './Login';
 
 
 function App() {
@@ -19,8 +20,8 @@ function App() {
           <Routes>
           <Route path="/" element={ <About/> } />
           <Route path="/signup" element={ <Signup/> } />
-          <Route path="/login" element={ <h1>Login</h1> } />
-          <Route path="/profile" element={ <h1>Blog</h1> } />
+          <Route path="/login" element={ <Login/> } />
+          <Route path="/blog" element={ <h1>Blog</h1> } />
           </Routes>
         </div>
       </Router>
