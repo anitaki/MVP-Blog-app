@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const { MONGO_URI } = process.env;
 
@@ -10,9 +10,9 @@ async function main() {
 }
 
 main()
-.then(() => {
-  console.log("Successfully connected to database");
-})
-.catch((err) => console.log(err));
+  .then(() => {
+    console.log("Successfully connected to database");
+  })
+  .catch((err) => console.log(err));
 
 module.exports = mongoose;
