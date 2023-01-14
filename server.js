@@ -5,7 +5,9 @@ const bodyparser = require("body-parser");
 const bcrypt = require("bcrypt");
 const port = process.env.PORT || 3000;
 const userRouter = require("./routers/userRoute");
+const articlesRouter = require("./routers/articlesRoute");
 const User = require("./modules/userModule");
+const Article = require("./modules/articlesModule");
 const cors = require("cors");
 app.use(
   cors({
@@ -16,12 +18,10 @@ app.use(
 app.use(express.json());
 
 app.use("/users", userRouter);
+app.use("/articles", articlesRouter);
 
-app.get("/", async (req, res) => {
-  res.send("hi");
-});
 
-// ---> Username and password
+// App for Username and password
 app.post("/signup", async (req, res) => {
   // check if username and password exist
   if (!req.body.username || !req.body.password) {
@@ -59,10 +59,11 @@ app.post("/login", async (req, res) => {
       }
     });
   } else {
-    res.send({ message:"wrong username" });
+    res.send({ message: "wrong username" });
   }
-  console.log(res.message)
+  console.log(res.message);
 });
+
 
 // server listening
 app.listen(port, () => {
