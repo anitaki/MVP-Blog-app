@@ -16,10 +16,13 @@
 .blog-header{
   display: flex;
   justify-content: space-between;
-   padding: 1em;
-  font-size: 2em;
-  font-weight: 500;
+   padding: 1em 3em;
   color: #72A292;
+}
+
+.logo{
+  font-size: 2rem;
+  font-weight: 500;
 }
 
 button {
@@ -30,4 +33,27 @@ button {
   border: 2px solid #A8845E;
   border-radius: 20px 20px 10px 10px ;
   cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+margin-block: 2rem;
+
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+   width: 90vw;
+}
+
+#article-text{
+  height: 10rem;
+}
+
+#create {
+  align-self: flex-end;
+  margin-block-start: 1rem;
 }
