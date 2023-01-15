@@ -13,6 +13,15 @@
   padding: 0 0 10dvh 0;
 }
 
+.blog-header{
+  display: flex;
+  justify-content: space-between;
+   padding: 1em;
+  font-size: 2em;
+  font-weight: 500;
+  color: #72A292;
+}
+
 button {
   width: 10rem;
   margin-inline: 0.5rem;

@@ -10,6 +10,7 @@ import { useState, useEffect  } from 'react';
 import About from './About';
 import Signup from './Signup';
 import Login from './Login';
+import Blog from './Blog';
 
 
 function App() {
@@ -21,7 +22,9 @@ function App() {
           <Route path="/" element={ <About/> } />
           <Route path="/signup" element={ <Signup/> } />
           <Route path="/login" element={ <Login/> } />
-          <Route path="/blog" element={ <h1>Blog</h1> } />
+          <Route path="/blog" element={ <Blog/>} />
+       
+
           </Routes>
         </div>
       </Router>

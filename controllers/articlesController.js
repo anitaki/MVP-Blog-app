@@ -2,7 +2,7 @@ const Article = require("../modules/articlesModule");
 
 const showArticles = async (req, res) => {
   var articles = await Article.find();
-  res.send(articles);
+  res.send({list : articles});
 };
 
 const getArticle = async (req, res) => {

@@ -16,6 +16,9 @@ const ArticleSchema = new mongoose.Schema({
     type: Date,
     default: Date.now   //() => Date.now()
   }, 
+  id: {
+    type: String,
+  }
 });
 
 const Article = mongoose.model("Article", ArticleSchema);
