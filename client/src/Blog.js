@@ -15,9 +15,7 @@ function Blog() {
   }, []);
 
   function redirect(id) {
-    
     navigate("/blog/" + id);
-
   }
 
   return (
@@ -35,7 +33,7 @@ function Blog() {
       {list.map((e) => {
         return (
           <div>
-            <div key={e.szid}>
+            <div key={e.id} class="blog-container">
               <h2>{e.title}</h2>
               <p>{<Moment format="DD/MM/YYYY">{e.createdAt}</Moment>}</p>
 

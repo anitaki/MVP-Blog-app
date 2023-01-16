@@ -8,52 +8,78 @@
   align-items: center;
   justify-content: flex-end;
   height: 90dvh;
-  background-image: url('./media/retrosupply.jpg');
+  background-image: url("./media/retrosupply.jpg");
   background-size: cover;
   padding: 0 0 10dvh 0;
 }
 
-.blog-header{
+.blog-header {
   display: flex;
   justify-content: space-between;
-   padding: 1em 3em;
-  color: #72A292;
+  padding: 1em 3em;
+  color: #72a292;
 }
 
-.logo{
+.blog-container {
+  border: 1px solid #a8845e;
+  margin: 1rem;
+  padding: 1.2rem;
+}
+
+.article-container {
+  border: 1px solid #a8845e;
+  margin: 1rem;
+  padding: 2rem;
+}
+
+.button-container {
+  margin: 2rem 1rem;
+  padding: 2rem;
+}
+
+.logo {
   font-size: 2rem;
   font-weight: 500;
 }
 
-button {
-  width: 10rem;
-  margin-inline: 0.5rem;
-  padding: 1em 0.2em;
-  background-color: #72A292;
-  border: 2px solid #A8845E;
-  border-radius: 20px 20px 10px 10px ;
-  cursor: pointer;
+.cancel {
+  background-color: #a8845e;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-margin-block: 2rem;
-
+#delete {
+  background-color: #d02f27;
 }
 
-form label {
-  display: flex;
-  flex-direction: column;
-   width: 90vw;
-}
-
-#article-text{
+#article-text {
   height: 10rem;
 }
 
 #create {
   align-self: flex-end;
   margin-block-start: 1rem;
+}
+
+button {
+  width: 10rem;
+  margin-inline: 0.5rem;
+  padding: 1em 0.2em;
+  background-color: #72a292;
+  border: 2px solid #a8845e;
+  border-radius: 20px 20px 10px 10px;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 2rem;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 90vw;
+  margin: 0.5rem 0;
 }

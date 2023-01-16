@@ -13,6 +13,7 @@ import Login from "./Login";
 import Blog from "./Blog";
 import Create from "./CreateArticle";
 import Article from "./Article";
+import Edit from "./Edit";
 
 function App() {
   return (
@@ -26,6 +27,8 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/create" element={<Create />} />
             <Route path="/blog/:id" element={<Article />} />
+            <Route path="/update/:id" element={<Edit />} />
+
           </Routes>
         </div>
       </Router>

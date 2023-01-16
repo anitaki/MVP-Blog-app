@@ -18,19 +18,29 @@ function Article() {
     });
   });
 
-  function del(){
-    axios.delete("http://localhost:3636/articles/" + id)
+  function del() {
+    axios.delete("http://localhost:3636/articles/" + id);
     navigate("/blog");
   }
 
+  function update() {
+    navigate("/update/" + id);
+  }
+
   return (
-    <div>
+    <div class="article-container">
       <h1>{title}</h1>
-      <p></p>
       <p>{description}</p>
       <p>{text}</p>
-      <button onClick={del}>Delete</button>
-      <button onClick={()=> navigate("/blog")}>Cancel</button>
+      <div class="button-container">
+        <button onClick={update}>Edit</button>
+        <button id="delete" onClick={del}>
+          Delete
+        </button>
+        <button class="cancel" onClick={() => navigate("/blog")}>
+          Cancel
+        </button>
+      </div>
     </div>
   );
 }

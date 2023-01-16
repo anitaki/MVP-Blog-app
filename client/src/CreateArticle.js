@@ -6,12 +6,10 @@ function Create() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [text, setText] = useState("");
-
   const navigate = useNavigate();
 
   function save(e) {
-    axios
-      .post("http://localhost:3636/articles/", { title, description, text })
+    axios.post("http://localhost:3636/articles/", { title, description, text });
     navigate("/blog");
   }
 
@@ -34,14 +32,19 @@ function Create() {
             onChange={(e) => setText(e.target.value)}
           />
         </label>
-        <button
-          id="create"
-          onClick={(e) => {
-            save();
-          }}
-        >
-          Create
-        </button>
+        <div>
+          <button
+            id="create"
+            onClick={(e) => {
+              save();
+            }}
+          >
+            Create
+          </button>
+          <button class="cancel" onClick={() => navigate("/blog")}>
+            Cancel
+          </button>
+        </div>
       </form>
     </div>
   );
