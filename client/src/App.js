@@ -1,18 +1,18 @@
-import './App.css';
+import "./App.css";
 import {
-  BrowserRouter as Router, 
-  Route, 
+  BrowserRouter as Router,
+  Route,
   Routes,
-  useNavigate, 
+  useNavigate,
 } from "react-router-dom";
 import axios from "axios";
-import { useState, useEffect  } from 'react';
-import About from './About';
-import Signup from './Signup';
-import Login from './Login';
-import Blog from './Blog';
-import Create from './CreateArticle'
-
+import { useState, useEffect } from "react";
+import About from "./About";
+import Signup from "./Signup";
+import Login from "./Login";
+import Blog from "./Blog";
+import Create from "./CreateArticle";
+import Article from "./Article";
 
 function App() {
   return (
@@ -20,14 +20,12 @@ function App() {
       <Router>
         <div>
           <Routes>
-          <Route path="/" element={ <About/> } />
-          <Route path="/signup" element={ <Signup/> } />
-          <Route path="/login" element={ <Login/> } />
-          <Route path="/blog" element={ <Blog/>} />
-          <Route path="/create" element={ <Create/>} />
-
-       
-
+            <Route path="/" element={<About />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/create" element={<Create />} />
+            <Route path="/blog/:id" element={<Article />} />
           </Routes>
         </div>
       </Router>

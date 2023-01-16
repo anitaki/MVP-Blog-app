@@ -11,9 +11,14 @@ function Blog() {
   useEffect(() => {
     axios.get("http://localhost:3636/articles/").then(({ data }) => {
       setList(data.list);
-      console.log(data.list);
     });
   }, []);
+
+  function redirect(id) {
+    
+    navigate("/blog/" + id);
+
+  }
 
   return (
     <div>
@@ -30,12 +35,19 @@ function Blog() {
       {list.map((e) => {
         return (
           <div>
-            <div key={e._id}>
+            <div key={e.szid}>
               <h2>{e.title}</h2>
               <p>{<Moment format="DD/MM/YYYY">{e.createdAt}</Moment>}</p>
 
               <p>{e.description}</p>
-              <p>{e.text}</p>
+              {/* <p>{e.text}</p> */}
+              <button
+                onClick={() => {
+                  redirect(e._id);
+                }}
+              >
+                Read more
+              </button>
             </div>
           </div>
         );

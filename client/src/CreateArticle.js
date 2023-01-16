@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Create() {
@@ -9,13 +9,11 @@ function Create() {
 
   const navigate = useNavigate();
 
-  function save() {
+  function save(e) {
     axios
-      .post("http://localhost:3636/articles/" , { title, description, text} )
-      .then(({ data }) => {
-       
-      });
-      navigate("/blog")
+      .post("http://localhost:3636/articles/", { title, description, text })
+      .then(({ data }) => {});
+    navigate("/blog");
   }
 
   return (
@@ -32,11 +30,17 @@ function Create() {
         </label>
         <label>
           Article:
-          <textarea id="article-text" onChange={(e) => setText(e.target.value)} />
+          <textarea
+            id="article-text"
+            onChange={(e) => setText(e.target.value)}
+          />
         </label>
-        <button id="create" onClick={() => {
-                save();
-              }}>
+        <button
+          id="create"
+          onClick={(e) => {
+            save();
+          }}
+        >
           Create
         </button>
       </form>

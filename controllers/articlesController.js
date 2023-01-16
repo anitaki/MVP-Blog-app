@@ -2,7 +2,7 @@ const Article = require("../modules/articlesModule");
 
 const showArticles = async (req, res) => {
   var articles = await Article.find();
-  res.send({list : articles});
+  res.send({ list: articles });
 };
 
 const getArticle = async (req, res) => {
@@ -10,19 +10,20 @@ const getArticle = async (req, res) => {
   res.send(article);
 };
 
-const addArticle = async(req, res) => {
+const addArticle = async (req, res) => {
   let newArticle = new Article({
     title: req.body.title,
     description: req.body.description,
     text: req.body.text,
-  })
-  try{ 
-     await newArticle.save();
-    res.send({message:true, newArticle})
-  } catch(e) {
-    res.send({message: e})
+    id: req.body._id,
+  });
+  try {
+    await newArticle.save();
+    res.send({ message: true, newArticle });
+  } catch (e) {
+    res.send({ message: e });
   }
-}
+};
 
 const deleteArticle = async (req, res) => {
   await Article.deleteOne({ _id: req.params.id });
