@@ -12,7 +12,6 @@ function Create() {
   function save(e) {
     axios
       .post("http://localhost:3636/articles/", { title, description, text })
-      .then(({ data }) => {});
     navigate("/blog");
   }
 
