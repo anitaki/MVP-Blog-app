@@ -20,6 +20,9 @@ app.use(express.json());
 app.use("/users", userRouter);
 app.use("/articles", articlesRouter); 
 
+app.get("/", (req, res) => {
+  res.send("Server is running...");
+});
 
 // App for Username and password
 app.post("/signup", async (req, res) => {
