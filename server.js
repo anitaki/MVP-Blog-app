@@ -67,7 +67,6 @@ app.post("/login", async (req, res) => {
   console.log(res.message);
 });
 
-
 // server listening
 app.listen(port, () => {
   console.log(`Server is up at ${port}`);

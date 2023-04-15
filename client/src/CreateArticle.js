@@ -9,7 +9,7 @@ function Create() {
   const navigate = useNavigate();
 
   function save(e) {
-    axios.post("mvp-blog-app.herokuapp.com/articles/", { title, description, text });
+    axios.post("http://localhost:3000/articles/", { title, description, text });
     navigate("/blog");
   }
 
