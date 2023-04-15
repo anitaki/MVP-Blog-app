@@ -3,10 +3,7 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  useNavigate,
 } from "react-router-dom";
-import axios from "axios";
-import { useState, useEffect } from "react";
 import About from "./About";
 import Signup from "./Signup";
 import Login from "./Login";

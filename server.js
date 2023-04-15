@@ -3,7 +3,7 @@ const app = express();
 require("dotenv").config();
 const bodyparser = require("body-parser");
 const bcrypt = require("bcrypt");
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3636;
 const userRouter = require("./routers/userRoute");
 const articlesRouter = require("./routers/articlesRoute");
 const User = require("./modules/userModule");
