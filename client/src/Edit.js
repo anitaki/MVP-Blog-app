@@ -12,7 +12,7 @@ function Edit() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get("http://localhost:3636/articles/" + id).then(({ data }) => {
+    axios.get("mvp-blog-app.herokuapp.com/articles/" + id).then(({ data }) => {
       setTitle(data.title);
       setDescription(data.description);
       setText(data.text);
@@ -22,7 +22,7 @@ function Edit() {
   function save() {
     console.log(id)
     axios
-      .post("http://localhost:3636/articles/" + id, { title, description, text })
+      .post("mvp-blog-app.herokuapp.com/articles/" + id, { title, description, text })
     // navigate("/blog");
   }
 
