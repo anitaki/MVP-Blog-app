@@ -9,6 +9,7 @@ const articlesRouter = require("./routers/articlesRoute");
 const User = require("./modules/userModule");
 const Article = require("./modules/articlesModule");
 const cors = require("cors");
+const path = require("path");
 app.use(
   cors({
     origin: "*",
@@ -16,6 +17,7 @@ app.use(
 );
 
 app.use(express.json());
+app.use(express.static(path.join(__dirname, "client", "build")));
 
 app.use("/users", userRouter);
 app.use("/articles", articlesRouter); 
@@ -65,6 +67,10 @@ app.post("/login", async (req, res) => {
     res.send({ message: "wrong username" });
   }
   console.log(res.message);
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 
 // server listening
