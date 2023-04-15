@@ -28,16 +28,16 @@ function Article() {
   }
 
   return (
-    <div class="article-container">
+    <div className="article-container">
       <h1>{title}</h1>
       <p>{description}</p>
       <p>{text}</p>
-      <div class="button-container">
+      <div className="button-container">
         <button onClick={update}>Edit</button>
         <button id="delete" onClick={del}>
           Delete
         </button>
-        <button class="cancel" onClick={() => navigate("/blog")}>
+        <button className="cancel" onClick={() => navigate("/blog")}>
           Cancel
         </button>
       </div>

@@ -18,7 +18,7 @@ app.use(
 app.use(express.json());
 
 app.use("/users", userRouter);
-app.use("/articles", articlesRouter);
+app.use("/articles", articlesRouter); 
 
 
 // App for Username and password

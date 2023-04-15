@@ -32,7 +32,11 @@ function Signup() {
           setPassword(e.target.value);
         }}
       />
-      <button onClick={() => signup()}>Sign Up</button>
+      <div className="button-container">
+        <button onClick={() => signup()}>Sign Up</button>
+        <button className="cancel" onClick={() => navigate("/")}>Cancel</button>
+      </div>
+
     </div>
   );
 }

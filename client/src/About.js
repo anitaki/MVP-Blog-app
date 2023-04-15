@@ -6,7 +6,7 @@ function About() {
   const navigate = useNavigate();
 
   return (
-    <div class="about-container">
+    <div className="about-container">
       <h2>Creating beautiful blogposts</h2>
       <h3>is made fun and easy with</h3>
       <h1>Bloggy</h1>

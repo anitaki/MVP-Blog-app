@@ -16,19 +16,21 @@
 .blog-header {
   display: flex;
   justify-content: space-between;
-  padding: 1em 3em;
-  color: #72a292;
+  padding: 1em 5rem;
+  color: #4e7769;
 }
 
 .blog-container {
   border: 1px solid #a8845e;
-  margin: 1rem;
   padding: 1.2rem;
+  width: 80vw;
+  margin: 1rem auto;
 }
 
 .article-container {
   border: 1px solid #a8845e;
-  margin: 1rem;
+  width: 80vw;
+  margin: 1rem auto;
   padding: 2rem;
 }
 
@@ -48,6 +50,10 @@
 
 #delete {
   background-color: #d02f27;
+}
+
+#create {
+  background-color: #3C9A4B;
 }
 
 #article-text {

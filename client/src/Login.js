@@ -22,17 +22,22 @@ function Login() {
   return (
     <div>
       <h1>Login</h1>
-      <input
+      <input placeholder="username"
         onChange={(e) => {
           setUsername(e.target.value);
         }}
       />
-      <input
+      <input placeholder="password"
         onChange={(e) => {
           setPassword(e.target.value);
         }}
       />
-      <button onClick={() => login()}>Login</button>
+      <div className="button-container">
+        <button onClick={() => login()}>Login</button>
+        <button className="cancel" onClick={() => navigate("/")}>Cancel</button>
+      </div>
+
+      
     </div>
   );
 }

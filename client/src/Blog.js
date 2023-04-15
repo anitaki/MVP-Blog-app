@@ -20,9 +20,10 @@ function Blog() {
 
   return (
     <div>
-      <div class="blog-header">
-        <span class="logo">Blog</span>
+      <div className="blog-header">
+        <span className="logo">Blog</span>
         <button
+          id="create"
           onClick={() => {
             navigate("/create");
           }}
@@ -33,7 +34,7 @@ function Blog() {
       {list.map((e) => {
         return (
           <div>
-            <div key={e.id} class="blog-container">
+            <div key={e.id} className="blog-container">
               <h2>{e.title}</h2>
               <p>{<Moment format="DD/MM/YYYY">{e.createdAt}</Moment>}</p>
 

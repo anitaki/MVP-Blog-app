@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 function Create() {
@@ -41,7 +41,7 @@ function Create() {
           >
             Create
           </button>
-          <button class="cancel" onClick={() => navigate("/blog")}>
+          <button className="cancel" onClick={() => navigate("/blog")}>
             Cancel
           </button>
         </div>
