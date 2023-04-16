@@ -23,7 +23,7 @@ function Edit() {
     console.log(id)
     axios
       .post("http://localhost:3636/articles/" + id, { title, description, text })
-    // navigate("/blog");
+    navigate("/blog");
   }
 
   return (  <div>
